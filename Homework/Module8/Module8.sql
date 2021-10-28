@@ -74,7 +74,7 @@ delimiter ;
 insert into Truck values(125, 30000, 'Tundra', 3);
 insert into Car values(125, 13000, 'Elantra', 3);
 insert into SUV values(122, 20000, 'Sonata', 3);
--- *********PAGE BREAK**********
+-- *********PAGE BREAK*********
 
 
 
