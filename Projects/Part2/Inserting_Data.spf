@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>ContentFilters</key>
+	<dict/>
+	<key>auto_connect</key>
+	<true/>
+	<key>data</key>
+	<dict>
+		<key>connection</key>
+		<dict>
+			<key>allowDataLocalInfile</key>
+			<integer>0</integer>
+			<key>database</key>
+			<string>CS7330_Project</string>
+			<key>enableClearTextPlugin</key>
+			<integer>0</integer>
+			<key>host</key>
+			<string>localhost</string>
+			<key>kcid</key>
+			<string>-257101206588769657</string>
+			<key>name</key>
+			<string>MySql_Testing</string>
+			<key>port</key>
+			<integer>3306</integer>
+			<key>rdbms_type</key>
+			<string>mysql</string>
+			<key>sslCACertFileLocation</key>
+			<string></string>
+			<key>sslCACertFileLocationEnabled</key>
+			<integer>0</integer>
+			<key>sslCertificateFileLocation</key>
+			<string></string>
+			<key>sslCertificateFileLocationEnabled</key>
+			<integer>0</integer>
+			<key>sslKeyFileLocation</key>
+			<string></string>
+			<key>sslKeyFileLocationEnabled</key>
+			<integer>0</integer>
+			<key>type</key>
+			<string>SPTCPIPConnection</string>
+			<key>useSSL</key>
+			<integer>0</integer>
+			<key>user</key>
+			<string>root</string>
+		</dict>
+		<key>session</key>
+		<dict>
+			<key>connectionEncoding</key>
+			<string>utf8mb4</string>
+			<key>contentFilterV2</key>
+			<dict>
+				<key>children</key>
+				<array/>
+				<key>filterClass</key>
+				<string>groupNode</string>
+				<key>isConjunction</key>
+				<true/>
+			</dict>
+			<key>contentPageNumber</key>
+			<integer>1</integer>
+			<key>contentSelection</key>
+			<data>
+			YnBsaXN0MDDUAQIDBAUGBwpYJHZlcnNpb25ZJGFyY2hpdmVyVCR0
+			b3BYJG9iamVjdHMSAAGGoF8QD05TS2V5ZWRBcmNoaXZlctEICVRk
+			YXRhgAGtCwwZGhscHSEoLDA0OFUkbnVsbNMNDg8QFBhXTlMua2V5
+			c1pOUy5vYmplY3RzViRjbGFzc6MREhOAAoADgASjFRYXgAWABoAI
+			gAxUdHlwZVRyb3dzVGtleXNfECZTZWxlY3Rpb25EZXRhaWxUeXBl
+			UHJpbWFyeUtleWVkRGV0YWlsc9MNDg8eHyCgoIAH0iIjJCVaJGNs
+			YXNzbmFtZVgkY2xhc3Nlc18QE05TTXV0YWJsZURpY3Rpb25hcnmj
+			JCYnXE5TRGljdGlvbmFyeVhOU09iamVjdNIODykroSqACYAL0g8t
+			Li9ZTlMuc3RyaW5ngApcSW5zcGVjdGlvbklE0iIjMTJfEA9OU011
+			dGFibGVTdHJpbmejMTMnWE5TU3RyaW5n0iIjNTZeTlNNdXRhYmxl
+			QXJyYXmjNTcnV05TQXJyYXnSIiMmOaImJwAIABEAGgAkACkAMgA3
+			AEkATABRAFMAYQBnAG4AdgCBAIgAjACOAJAAkgCWAJgAmgCcAJ4A
+			owCoAK0A1gDdAN4A3wDhAOYA8QD6ARABFAEhASoBLwExATMBNQE6
+			AUQBRgFTAVgBagFuAXcBfAGLAY8BlwGcAAAAAAAAAgEAAAAAAAAA
+			OgAAAAAAAAAAAAAAAAAAAZ8=
+			</data>
+			<key>contentSortColIsAsc</key>
+			<true/>
+			<key>contentViewport</key>
+			<string>{{0, 0}, {1280.5, 793}}</string>
+			<key>isToolbarVisible</key>
+			<true/>
+			<key>queries</key>
+			<string>-- Builder 
+insert into Builder values
+					(12345, 'Builder-1', '12345 Builder Circle, Dallas TX', null),
+					(23456, 'Builder-2', '23456 Builder Circle, Dallas TX', null),
+					(34567, 'Builder-3', '34567 Builder Circle, Dallas TX', null),
+					(45678, 'Builder-4', '45678 Builder Circle, Dallas TX', null),
+					(12321, 'Builder-5', '12321 Builder Circle, Dallas TX', null);
+-- Building 
+-- -- Date format for INSERT: YYYY-MM-DD
+insert into Building values
+					(12345, '100 Main St., Dallas, TX', 'commerical', 250000, '1999/12/31', null),
+					(12345, '300 Oak St., Dallas, TX', 'residential', 3000, '2000/01/01', null),
+					(12345, '302 Oak St., Dallas, TX', 'residential', 4000, '2001/02/01', null),
+					(12345, '304 Oak St., Dallas, TX', 'residential', 1500, '2002/03/01', null),
+					(12345, '306 Oak St., Dallas, TX', 'residential', 1500, '2003/04/01', null),
+					(12345, '308 Oak St., Dallas, TX', 'residential', 2000, '2003/04/01', null),
+					(23456, '100 Industrial Ave., Fort Worth, TX', 'commerical', 100000, '2005/06/01', null),
+					(23456, '101 Industrial Ave., Fort Worth, TX', 'commerical', 80000, '2005/06/01', null),
+					(23456, '102 Industrial Ave., Fort Worth, TX', 'commerical', 75000, '2005/06/01', null),
+					(23456, '103 Industrial Ave., Fort Worth, TX', 'commerical', 50000, '2005/06/01', null),
+					(23456, '104 Industrial Ave., Fort Worth, TX', 'commerical', 80000, '2005/06/01', null),
+					(23456, '105 Industrial Ave., Fort Worth, TX', 'commerical', 90000, '2005/06/01', null),
+					(45678, '100 Winding Wood, Carrollton, TX', 'residential', 2500, null, null),
+					(45678, '102 Winding Wood, Carrollton, TX', 'residential', 2800, null, null),
+					(12321, '210 Cherry Bark Lane, Plano, TX', 'residential', 3200, '2016/10/01', null),
+					(12321, '212 Cherry Bark Lane, Plano, TX', 'residential', null, null, null),
+					(12321, '214 Cherry Bark Lane, Plano, TX', 'residential', null, null, null),
+					(12321, '216 Cherry Bark Lane, Plano, TX', 'residential', null, null, null);
+-- Inspector
+insert into Inspector values
+					(101, 'Inspector-1', '1984/11/08'),
+					(102, 'Inspector-2', '1994/11/08'),
+					(103, 'Inspector-3', '2004/11/08'),
+					(104, 'Inspector-4', '2014/11/08'),
+					(105, 'Inspector-5', '2018/11/08');
+-- Inspection
+-- -- Inspector 101, October, Builder 12345, 300 Oak
+insert into Inspection values
+					(1, 'FRM', '2021/10/01', 12345, 101, 100),
+					(2, 'PLU', '2021/10/02', 12345, 101, 100),
+					(3, 'ELE', '2021/10/03', 12345, 101, 100),
+					(4, 'HAC', '2021/10/04', 12345, 101, 100),
+					(5, 'FNL', '2021/10/05', 12345, 101, 200);
+-- InspectionData
+-- -- Inspector 101, October, Builder 12345, 300 Oak
+insert into InspectionData values
+					(100, 'no problems noted', null, 1),
+					(90, 'minor leak, corrected', null, 2),
+					(80, 'exposed junction box', null, 3),
+					(80, 'duct needs taping', null, 4),
+					(90, 'ready for owner', null, 5);
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					</string>
+			<key>table</key>
+			<string>InspectionData</string>
+			<key>view</key>
+			<string>SP_VIEW_CUSTOMQUERY</string>
+			<key>windowVerticalDividerPosition</key>
+			<real>158.5</real>
+		</dict>
+	</dict>
+	<key>encrypted</key>
+	<false/>
+	<key>format</key>
+	<string>connection</string>
+	<key>queryFavorites</key>
+	<array/>
+	<key>rdbms_type</key>
+	<string>mysql</string>
+	<key>rdbms_version</key>
+	<string>8.0.27</string>
+	<key>version</key>
+	<integer>1</integer>
+</dict>
+</plist>
