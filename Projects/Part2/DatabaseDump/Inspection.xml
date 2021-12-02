@@ -1,0 +1,404 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!--
+-
+- Sequel Ace XML dump
+- Version 20016
+-
+- https://sequel-ace.com/
+- https://github.com/Sequel-Ace/Sequel-Ace
+-
+- Host: localhost (MySQL 8.0.27)
+- Database: CS7330_Project
+- Generation Time Time: 2021-12-02 18:36:02 +0000
+-
+-->
+
+<mysqldump xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<database name="CS7330_Project">
+
+	<table_structure name="Inspection">
+		<field field="InspectionID" type="{length = 3, bytes = 0x696e74}" null="NO" key="{length = 3, bytes = 0x505249}" default="<null>" extra="" />
+		<field field="Type" type="{length = 10, bytes = 0x76617263686172283329}" null="NO" key="{length = 0, bytes = 0x}" default="<null>" extra="" />
+		<field field="InspectionDate" type="{length = 4, bytes = 0x64617465}" null="NO" key="{length = 0, bytes = 0x}" default="<null>" extra="" />
+		<field field="LicenseID" type="{length = 3, bytes = 0x696e74}" null="YES" key="{length = 3, bytes = 0x4d554c}" default="<null>" extra="" />
+		<field field="EmployeeID" type="{length = 3, bytes = 0x696e74}" null="YES" key="{length = 3, bytes = 0x4d554c}" default="<null>" extra="" />
+		<field field="Cost" type="{length = 3, bytes = 0x696e74}" null="NO" key="{length = 0, bytes = 0x}" default="<null>" extra="" />
+		<field field="Address" type="{length = 12, bytes = 0x766172636861722832303029}" null="NO" key="{length = 3, bytes = 0x4d554c}" default="<null>" extra="" />
+		<field field="Score" type="{length = 3, bytes = 0x696e74}" null="NO" key="{length = 0, bytes = 0x}" default="<null>" extra="" />
+		<field field="Details" type="{length = 12, bytes = 0x766172636861722832303029}" null="NO" key="{length = 0, bytes = 0x}" default="<null>" extra="" />
+		<field field="InspectionResults" type="{length = 3, bytes = 0x696e74}" null="NO" key="{length = 0, bytes = 0x}" default="<null>" extra="" />
+
+		<options name="Inspection" engine="InnoDB" version="10" row_format="{length = 7, bytes = 0x44796e616d6963}" rows="26" avg_row_length="630" data_length="16384" max_data_length="0" index_length="49152" data_free="0" create_time="2021-12-01 20:33:09" update_time="2021-12-02 12:31:53" collation="utf8mb4_0900_ai_ci" create_options="" comment="" />
+	</table_structure>
+
+	<table_data name="Inspection">
+
+	<row>
+		<field name="InspectionID">1</field>
+		<field name="Type">FRM</field>
+		<field name="InspectionDate">2021-10-01</field>
+		<field name="LicenseID">12345</field>
+		<field name="EmployeeID">101</field>
+		<field name="Cost">100</field>
+		<field name="Address">300 Oak St., Dallas, TX</field>
+		<field name="Score">100</field>
+		<field name="Details">no problems noted</field>
+		<field name="InspectionResults">1</field>
+	</row>
+
+	<row>
+		<field name="InspectionID">2</field>
+		<field name="Type">PLU</field>
+		<field name="InspectionDate">2021-10-02</field>
+		<field name="LicenseID">12345</field>
+		<field name="EmployeeID">101</field>
+		<field name="Cost">100</field>
+		<field name="Address">300 Oak St., Dallas, TX</field>
+		<field name="Score">90</field>
+		<field name="Details">minor leak, corrected</field>
+		<field name="InspectionResults">1</field>
+	</row>
+
+	<row>
+		<field name="InspectionID">3</field>
+		<field name="Type">ELE</field>
+		<field name="InspectionDate">2021-10-03</field>
+		<field name="LicenseID">12345</field>
+		<field name="EmployeeID">101</field>
+		<field name="Cost">100</field>
+		<field name="Address">300 Oak St., Dallas, TX</field>
+		<field name="Score">80</field>
+		<field name="Details">exposed junction box</field>
+		<field name="InspectionResults">1</field>
+	</row>
+
+	<row>
+		<field name="InspectionID">4</field>
+		<field name="Type">HAC</field>
+		<field name="InspectionDate">2021-10-04</field>
+		<field name="LicenseID">12345</field>
+		<field name="EmployeeID">101</field>
+		<field name="Cost">100</field>
+		<field name="Address">300 Oak St., Dallas, TX</field>
+		<field name="Score">80</field>
+		<field name="Details">duct needs taping</field>
+		<field name="InspectionResults">1</field>
+	</row>
+
+	<row>
+		<field name="InspectionID">5</field>
+		<field name="Type">FNL</field>
+		<field name="InspectionDate">2021-10-05</field>
+		<field name="LicenseID">12345</field>
+		<field name="EmployeeID">101</field>
+		<field name="Cost">200</field>
+		<field name="Address">300 Oak St., Dallas, TX</field>
+		<field name="Score">90</field>
+		<field name="Details">ready for owner</field>
+		<field name="InspectionResults">1</field>
+	</row>
+
+	<row>
+		<field name="InspectionID">6</field>
+		<field name="Type">FRM</field>
+		<field name="InspectionDate">2021-10-01</field>
+		<field name="LicenseID">12345</field>
+		<field name="EmployeeID">102</field>
+		<field name="Cost">100</field>
+		<field name="Address">302 Oak St., Dallas, TX</field>
+		<field name="Score">100</field>
+		<field name="Details">no problems noted</field>
+		<field name="InspectionResults">1</field>
+	</row>
+
+	<row>
+		<field name="InspectionID">7</field>
+		<field name="Type">PLU</field>
+		<field name="InspectionDate">2021-10-02</field>
+		<field name="LicenseID">12345</field>
+		<field name="EmployeeID">102</field>
+		<field name="Cost">100</field>
+		<field name="Address">302 Oak St., Dallas, TX</field>
+		<field name="Score">25</field>
+		<field name="Details">massive leaks</field>
+		<field name="InspectionResults">0</field>
+	</row>
+
+	<row>
+		<field name="InspectionID">8</field>
+		<field name="Type">PLU</field>
+		<field name="InspectionDate">2021-10-08</field>
+		<field name="LicenseID">12345</field>
+		<field name="EmployeeID">102</field>
+		<field name="Cost">100</field>
+		<field name="Address">302 Oak St., Dallas, TX</field>
+		<field name="Score">50</field>
+		<field name="Details">still leaking</field>
+		<field name="InspectionResults">0</field>
+	</row>
+
+	<row>
+		<field name="InspectionID">9</field>
+		<field name="Type">PLU</field>
+		<field name="InspectionDate">2021-10-12</field>
+		<field name="LicenseID">12345</field>
+		<field name="EmployeeID">102</field>
+		<field name="Cost">100</field>
+		<field name="Address">302 Oak St., Dallas, TX</field>
+		<field name="Score">80</field>
+		<field name="Details">no leaks, but messy</field>
+		<field name="InspectionResults">1</field>
+	</row>
+
+	<row>
+		<field name="InspectionID">10</field>
+		<field name="Type">ELE</field>
+		<field name="InspectionDate">2021-10-14</field>
+		<field name="LicenseID">12345</field>
+		<field name="EmployeeID">102</field>
+		<field name="Cost">100</field>
+		<field name="Address">302 Oak St., Dallas, TX</field>
+		<field name="Score">100</field>
+		<field name="Details">no problems noted</field>
+		<field name="InspectionResults">1</field>
+	</row>
+
+	<row>
+		<field name="InspectionID">11</field>
+		<field name="Type">HAC</field>
+		<field name="InspectionDate">2021-11-01</field>
+		<field name="LicenseID">12345</field>
+		<field name="EmployeeID">102</field>
+		<field name="Cost">100</field>
+		<field name="Address">302 Oak St., Dallas, TX</field>
+		<field name="Score">80</field>
+		<field name="Details">duct needs taping</field>
+		<field name="InspectionResults">1</field>
+	</row>
+
+	<row>
+		<field name="InspectionID">12</field>
+		<field name="Type">FNL</field>
+		<field name="InspectionDate">2021-11-02</field>
+		<field name="LicenseID">12345</field>
+		<field name="EmployeeID">102</field>
+		<field name="Cost">200</field>
+		<field name="Address">302 Oak St., Dallas, TX</field>
+		<field name="Score">90</field>
+		<field name="Details">ready for owner</field>
+		<field name="InspectionResults">1</field>
+	</row>
+
+	<row>
+		<field name="InspectionID">13</field>
+		<field name="Type">FRM</field>
+		<field name="InspectionDate">2021-10-01</field>
+		<field name="LicenseID">45678</field>
+		<field name="EmployeeID">103</field>
+		<field name="Cost">100</field>
+		<field name="Address">100 Winding Wood, Carrollton, TX</field>
+		<field name="Score">100</field>
+		<field name="Details">no problems noted</field>
+		<field name="InspectionResults">1</field>
+	</row>
+
+	<row>
+		<field name="InspectionID">14</field>
+		<field name="Type">PLU</field>
+		<field name="InspectionDate">2021-10-20</field>
+		<field name="LicenseID">45678</field>
+		<field name="EmployeeID">103</field>
+		<field name="Cost">100</field>
+		<field name="Address">100 Winding Wood, Carrollton, TX</field>
+		<field name="Score">100</field>
+		<field name="Details">everything working</field>
+		<field name="InspectionResults">1</field>
+	</row>
+
+	<row>
+		<field name="InspectionID">15</field>
+		<field name="Type">ELE</field>
+		<field name="InspectionDate">2021-10-25</field>
+		<field name="LicenseID">45678</field>
+		<field name="EmployeeID">103</field>
+		<field name="Cost">100</field>
+		<field name="Address">100 Winding Wood, Carrollton, TX</field>
+		<field name="Score">100</field>
+		<field name="Details">no problems noted</field>
+		<field name="InspectionResults">1</field>
+	</row>
+
+	<row>
+		<field name="InspectionID">16</field>
+		<field name="Type">HAC</field>
+		<field name="InspectionDate">2021-11-02</field>
+		<field name="LicenseID">45678</field>
+		<field name="EmployeeID">103</field>
+		<field name="Cost">100</field>
+		<field name="Address">100 Winding Wood, Carrollton, TX</field>
+		<field name="Score">100</field>
+		<field name="Details">no problems noted</field>
+		<field name="InspectionResults">1</field>
+	</row>
+
+	<row>
+		<field name="InspectionID">17</field>
+		<field name="Type">FNL</field>
+		<field name="InspectionDate">2021-11-14</field>
+		<field name="LicenseID">45678</field>
+		<field name="EmployeeID">103</field>
+		<field name="Cost">200</field>
+		<field name="Address">100 Winding Wood, Carrollton, TX</field>
+		<field name="Score">100</field>
+		<field name="Details">REJECT TOO MANY</field>
+		<field name="InspectionResults">1</field>
+	</row>
+
+	<row>
+		<field name="InspectionID">19</field>
+		<field name="Type">PLU</field>
+		<field name="InspectionDate">2021-11-02</field>
+		<field name="LicenseID">45678</field>
+		<field name="EmployeeID">103</field>
+		<field name="Cost">100</field>
+		<field name="Address">102 Winding Wood, Carrollton, TX</field>
+		<field name="Score">90</field>
+		<field name="Details">minor leak, corrected</field>
+		<field name="InspectionResults">1</field>
+	</row>
+
+	<row>
+		<field name="InspectionID">20</field>
+		<field name="Type">ELE</field>
+		<field name="InspectionDate">2021-11-03</field>
+		<field name="LicenseID">45678</field>
+		<field name="EmployeeID">103</field>
+		<field name="Cost">100</field>
+		<field name="Address">102 Winding Wood, Carrollton, TX</field>
+		<field name="Score">80</field>
+		<field name="Details">nexposed junction box</field>
+		<field name="InspectionResults">1</field>
+	</row>
+
+	<row>
+		<field name="InspectionID">21</field>
+		<field name="Type">FRM</field>
+		<field name="InspectionDate">2021-10-12</field>
+		<field name="LicenseID">12321</field>
+		<field name="EmployeeID">103</field>
+		<field name="Cost">100</field>
+		<field name="Address">210 Cherry Bark Lane, Plano, TX</field>
+		<field name="Score">85</field>
+		<field name="Details">no issues but messy</field>
+		<field name="InspectionResults">1</field>
+	</row>
+
+	<row>
+		<field name="InspectionID">22</field>
+		<field name="Type">PLU</field>
+		<field name="InspectionDate">2021-11-04</field>
+		<field name="LicenseID">12321</field>
+		<field name="EmployeeID">103</field>
+		<field name="Cost">100</field>
+		<field name="Address">210 Cherry Bark Lane, Plano, TX</field>
+		<field name="Score">80</field>
+		<field name="Details">duct needs sealing</field>
+		<field name="InspectionResults">1</field>
+	</row>
+
+	<row>
+		<field name="InspectionID">23</field>
+		<field name="Type">SAF</field>
+		<field name="InspectionDate">2021-10-14</field>
+		<field name="LicenseID">12321</field>
+		<field name="EmployeeID">104</field>
+		<field name="Cost">50</field>
+		<field name="Address">210 Cherry Bark Lane, Plano, TX</field>
+		<field name="Score">100</field>
+		<field name="Details">no problems noted</field>
+		<field name="InspectionResults">1</field>
+	</row>
+
+	<row>
+		<field name="InspectionID">24</field>
+		<field name="Type">FRM</field>
+		<field name="InspectionDate">2021-11-06</field>
+		<field name="LicenseID">23456</field>
+		<field name="EmployeeID">105</field>
+		<field name="Cost">100</field>
+		<field name="Address">100 Industrial Ave., Fort Worth, TX</field>
+		<field name="Score">100</field>
+		<field name="Details">okay</field>
+		<field name="InspectionResults">1</field>
+	</row>
+
+	<row>
+		<field name="InspectionID">25</field>
+		<field name="Type">FRM</field>
+		<field name="InspectionDate">2021-11-02</field>
+		<field name="LicenseID">23456</field>
+		<field name="EmployeeID">105</field>
+		<field name="Cost">100</field>
+		<field name="Address">105 Industrial Ave., Fort Worth, TX</field>
+		<field name="Score">100</field>
+		<field name="Details">all work completed per checklist.</field>
+		<field name="InspectionResults">1</field>
+	</row>
+
+	<row>
+		<field name="InspectionID">26</field>
+		<field name="Type">POL</field>
+		<field name="InspectionDate">2021-11-05</field>
+		<field name="LicenseID">12321</field>
+		<field name="EmployeeID">105</field>
+		<field name="Cost">90</field>
+		<field name="Address">210 Cherry Bark Lane, Plano, TX</field>
+		<field name="Score">100</field>
+		<field name="Details">ready for owner</field>
+		<field name="InspectionResults">1</field>
+	</row>
+
+	<row>
+		<field name="InspectionID">27</field>
+		<field name="Type">FRM</field>
+		<field name="InspectionDate">2021-11-21</field>
+		<field name="LicenseID">34567</field>
+		<field name="EmployeeID">104</field>
+		<field name="Cost">100</field>
+		<field name="Address">1420 Main St., Lewisville TX</field>
+		<field name="Score">50</field>
+		<field name="Details">work not finished.</field>
+		<field name="InspectionResults">0</field>
+	</row>
+
+	<row>
+		<field name="InspectionID">28</field>
+		<field name="Type">FRM</field>
+		<field name="InspectionDate">2021-11-22</field>
+		<field name="LicenseID">34567</field>
+		<field name="EmployeeID">104</field>
+		<field name="Cost">150</field>
+		<field name="Address">1420 Main St., Lewisville TX</field>
+		<field name="Score">60</field>
+		<field name="Details">lights not completed.</field>
+		<field name="InspectionResults">0</field>
+	</row>
+
+	<row>
+		<field name="InspectionID">29</field>
+		<field name="Type">POL</field>
+		<field name="InspectionDate">2021-11-28</field>
+		<field name="LicenseID">45678</field>
+		<field name="EmployeeID">103</field>
+		<field name="Cost">50</field>
+		<field name="Address">100 Winding Wood, Carrollton, TX</field>
+		<field name="Score">76</field>
+		<field name="Details">Dirty filter</field>
+		<field name="InspectionResults">1</field>
+	</row>
+
+	</table_data>
+
+</database>
+</mysqldump>

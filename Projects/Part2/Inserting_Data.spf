@@ -78,6 +78,8 @@
 			AUQBRgFTAVgBagFuAXcBfAGLAY8BlwGcAAAAAAAAAgEAAAAAAAAA
 			OgAAAAAAAAAAAAAAAAAAAZ8=
 			</data>
+			<key>contentSortCol</key>
+			<string>Address</string>
 			<key>contentSortColIsAsc</key>
 			<true/>
 			<key>contentViewport</key>
@@ -95,20 +97,24 @@ insert into Builder values
 -- Building 
 -- -- Date format for INSERT: YYYY-MM-DD
 insert into Building values
+					--
 					(12345, '100 Main St., Dallas, TX', 'commerical', 250000, '1999/12/31', null),
 					(12345, '300 Oak St., Dallas, TX', 'residential', 3000, '2000/01/01', null),
 					(12345, '302 Oak St., Dallas, TX', 'residential', 4000, '2001/02/01', null),
 					(12345, '304 Oak St., Dallas, TX', 'residential', 1500, '2002/03/01', null),
 					(12345, '306 Oak St., Dallas, TX', 'residential', 1500, '2003/04/01', null),
 					(12345, '308 Oak St., Dallas, TX', 'residential', 2000, '2003/04/01', null),
+					--
 					(23456, '100 Industrial Ave., Fort Worth, TX', 'commerical', 100000, '2005/06/01', null),
 					(23456, '101 Industrial Ave., Fort Worth, TX', 'commerical', 80000, '2005/06/01', null),
 					(23456, '102 Industrial Ave., Fort Worth, TX', 'commerical', 75000, '2005/06/01', null),
 					(23456, '103 Industrial Ave., Fort Worth, TX', 'commerical', 50000, '2005/06/01', null),
 					(23456, '104 Industrial Ave., Fort Worth, TX', 'commerical', 80000, '2005/06/01', null),
 					(23456, '105 Industrial Ave., Fort Worth, TX', 'commerical', 90000, '2005/06/01', null),
+					--
 					(45678, '100 Winding Wood, Carrollton, TX', 'residential', 2500, null, null),
 					(45678, '102 Winding Wood, Carrollton, TX', 'residential', 2800, null, null),
+					--
 					(12321, '210 Cherry Bark Lane, Plano, TX', 'residential', 3200, '2016/10/01', null),
 					(12321, '212 Cherry Bark Lane, Plano, TX', 'residential', null, null, null),
 					(12321, '214 Cherry Bark Lane, Plano, TX', 'residential', null, null, null),
@@ -121,21 +127,48 @@ insert into Inspector values
 					(104, 'Inspector-4', '2014/11/08'),
 					(105, 'Inspector-5', '2018/11/08');
 -- Inspection
--- -- Inspector 101, October, Builder 12345, 300 Oak
 insert into Inspection values
-					(1, 'FRM', '2021/10/01', 12345, 101, 100),
-					(2, 'PLU', '2021/10/02', 12345, 101, 100),
-					(3, 'ELE', '2021/10/03', 12345, 101, 100),
-					(4, 'HAC', '2021/10/04', 12345, 101, 100),
-					(5, 'FNL', '2021/10/05', 12345, 101, 200);
--- InspectionData
--- -- Inspector 101, October, Builder 12345, 300 Oak
-insert into InspectionData values
-					(100, 'no problems noted', null, 1),
-					(90, 'minor leak, corrected', null, 2),
-					(80, 'exposed junction box', null, 3),
-					(80, 'duct needs taping', null, 4),
-					(90, 'ready for owner', null, 5);
+
+					-- -- Inspector 101, October, Builder 12345, 300 Oak
+					-- (1, 'FRM', '2021/10/01', 12345, 101, 100, '300 Oak St., Dallas, TX', 100, 'no problems noted', 1);
+					-- (2, 'PLU', '2021/10/02', 12345, 101, 100, '300 Oak St., Dallas, TX', 90, 'minor leak, corrected', 1);
+					-- (3, 'ELE', '2021/10/03', 12345, 101, 100, '300 Oak St., Dallas, TX', 80, 'exposed junction box', 1);
+					-- (4, 'HAC', '2021/10/04', 12345, 101, 100, '300 Oak St., Dallas, TX', 80, 'duct needs taping', 1);
+					-- (5, 'FNL', '2021/10/05', 12345, 101, 200, '300 Oak St., Dallas, TX', 90, 'ready for owner', 1);
+					
+					-- -- Inspector 102, October and November, Builder 12345, 302 Oak
+					-- (6, 'FRM', '2021/10/01', 12345, 102, 100, '302 Oak St., Dallas, TX', 100, 'no problems noted', 1);
+					-- (7, 'PLU', '2021/10/02', 12345, 102, 100, '302 Oak St., Dallas, TX', 25, 'massive leaks', 0);
+					-- (8, 'PLU', '2021/10/08', 12345, 102, 100, '302 Oak St., Dallas, TX', 50, 'still leaking', 0);
+					-- (9, 'PLU', '2021/10/12', 12345, 102, 100, '302 Oak St., Dallas, TX', 80, 'no leaks, but messy', 1);
+					-- (10, 'ELE', '2021/10/14', 12345, 102, 100, '302 Oak St., Dallas, TX', 100, 'no problems noted', 1);
+					-- (11, 'HAC', '2021/11/01', 12345, 102, 100, '302 Oak St., Dallas, TX', 80, 'duct needs taping', 1);
+					-- (12, 'FNL', '2021/11/02', 12345, 102, 200, '302 Oak St., Dallas, TX', 90, 'ready for owner', 1);
+					
+					-- -- Inspector 103, October and November, Builder 45678, 100 Winding Wood
+					-- (13, 'FRM', '2021/10/01', 45678, 103, 100, '100 Winding Wood, Carrollton, TX', 100, 'no problems noted', 1);
+					-- (14, 'PLU', '2021/10/20', 45678, 103, 100, '100 Winding Wood, Carrollton, TX', 100, 'everything working', 1);
+					-- (15, 'ELE', '2021/10/25', 45678, 103, 100, '100 Winding Wood, Carrollton, TX', 100, 'no problems noted', 1);
+					-- (16, 'HAC', '2021/11/02', 45678, 103, 100, '100 Winding Wood, Carrollton, TX', 100, 'no problems noted', 1);
+					-- (17, 'FNL', '2021/11/14', 45678, 103, 200, '100 Winding Wood, Carrollton, TX', 100, 'REJECT TOO MANY', 1);
+					
+					-- -- Inspector 103, November, Builder 45678, 102 Winding Wood
+					-- (18, 'FRM', '2021/11/01', 45678, 103, 100, '102 Winding Wood, Carrollton, TX', 100, 'no problems noted', 1);
+					-- (19, 'PLU', '2021/11/02', 45678, 103, 100, '102 Winding Wood, Carrollton, TX', 90, 'minor leak, corrected', 1);
+					-- (20, 'ELE', '2021/11/03', 45678, 103, 100, '102 Winding Wood, Carrollton, TX', 80, 'nexposed junction box', 1);
+
+					-- -- Inspector 103, October and Novemeber, Builder 12321, 210 Cherry Bark
+					-- (21, 'FRM', '2021/10/12', 12321, 103, 100, '210 Cherry Bark Lane, Plano, TX', 85, 'no issues but messy', 1);
+					-- (22, 'PLU', '2021/11/04', 12321, 103, 100, '210 Cherry Bark Lane, Plano, TX', 80, 'duct needs sealing', 1);
+					
+					-- -- Inspector 104, October, Builder 12321, 102 Winding Wood
+					-- (23, 'SAF', '2021/10/14', 12321, 104, 50, '210 Cherry Bark Lane, Plano, TX', 100, 'no problems noted', 1);
+
+					-- -- Inspector 105, October, Builder 23456, 100 Industrial Ave.
+					-- (24, 'FRM', '2021/11/06', 23456, 105, 100, '100 Industrial Ave., Fort Worth, TX', 100, 'okay', 1);
+					-- (25, 'FRM', '2021/11/02', 23456, 105, 100, '105 Industrial Ave., Fort Worth, TX', 100, 'tbd', 1);
+					(26, 'POL', '2021/11/05', 12321, 105, 90, '210 Cherry Bark Lane, Plano, TX', 100, 'ready for owner', 1);
+-- -- -- TESTING -- -- -- 
 					
 					
 					
@@ -147,7 +180,7 @@ insert into InspectionData values
 					
 					</string>
 			<key>table</key>
-			<string>InspectionData</string>
+			<string>Inspection</string>
 			<key>view</key>
 			<string>SP_VIEW_CUSTOMQUERY</string>
 			<key>windowVerticalDividerPosition</key>

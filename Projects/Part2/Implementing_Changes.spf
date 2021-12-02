@@ -70,107 +70,26 @@
 			UHJpbWFyeUtleWVkRGV0YWlsc9MNDg8eHyCgoIAH0iIjJCVaJGNs
 			YXNzbmFtZVgkY2xhc3Nlc18QE05TTXV0YWJsZURpY3Rpb25hcnmj
 			JCYnXE5TRGljdGlvbmFyeVhOU09iamVjdNIODykroSqACYAL0g8t
-			Li9ZTlMuc3RyaW5ngApXQWRkcmVzc9IiIzEyXxAPTlNNdXRhYmxl
-			U3RyaW5nozEzJ1hOU1N0cmluZ9IiIzU2Xk5TTXV0YWJsZUFycmF5
-			ozU3J1dOU0FycmF50iIjJjmiJicACAARABoAJAApADIANwBJAEwA
-			UQBTAGEAZwBuAHYAgQCIAIwAjgCQAJIAlgCYAJoAnACeAKMAqACt
-			ANYA3QDeAN8A4QDmAPEA+gEQARQBIQEqAS8BMQEzATUBOgFEAUYB
-			TgFTAWUBaQFyAXcBhgGKAZIBlwAAAAAAAAIBAAAAAAAAADoAAAAA
-			AAAAAAAAAAAAAAGa
+			Li9ZTlMuc3RyaW5ngApcSW5zcGVjdGlvbklE0iIjMTJfEA9OU011
+			dGFibGVTdHJpbmejMTMnWE5TU3RyaW5n0iIjNTZeTlNNdXRhYmxl
+			QXJyYXmjNTcnV05TQXJyYXnSIiMmOaImJwAIABEAGgAkACkAMgA3
+			AEkATABRAFMAYQBnAG4AdgCBAIgAjACOAJAAkgCWAJgAmgCcAJ4A
+			owCoAK0A1gDdAN4A3wDhAOYA8QD6ARABFAEhASoBLwExATMBNQE6
+			AUQBRgFTAVgBagFuAXcBfAGLAY8BlwGcAAAAAAAAAgEAAAAAAAAA
+			OgAAAAAAAAAAAAAAAAAAAZ8=
 			</data>
 			<key>contentSortColIsAsc</key>
 			<true/>
 			<key>contentViewport</key>
-			<string>{{0, 0}, {693, 474}}</string>
+			<string>{{0, 0}, {1280.5, 793}}</string>
 			<key>isToolbarVisible</key>
 			<true/>
-			<key>queries</key>
-			<string>
-CREATE TABLE Builder
-(
-  LicenseID INT NOT NULL,
-  Name VARCHAR(100) NOT NULL,
-  Address VARCHAR(200) NOT NULL,
-  InspectionOrderID INT,
-  PRIMARY KEY (LicenseID)
-);
-
-CREATE TABLE Building
-(
-  BuilderID INT NOT NULL,
-  Address VARCHAR(200) NOT NULL,
-  Type VARCHAR(100) NOT NULL,
-  Size INT,
-  DateFirstActivity DATE,
-  InspectionRecordID INT,
-  PRIMARY KEY (Address),
-  FOREIGN KEY (BuilderID) REFERENCES Builder(LicenseID),
-  FOREIGN KEY (InspectionRecordID) REFERENCES Inspection(InspectionID)
-);
-
-CREATE TABLE Inspector
-(
-  EmployeeID INT NOT NULL,
-  Name VARCHAR(30) NOT NULL,
-  HireDate DATE NOT NULL,
-  PRIMARY KEY (EmployeeID)
-);
-
-CREATE TABLE Inspection
-(
-  InspectionID INT NOT NULL,
-  Type VARCHAR(3) NOT NULL,
-  InspectionDate DATE NOT NULL,
-  LicenseID INT,
-  EmployeeID INT,
-   Cost INT NOT NULL,
-   Address VARCHAR(200) NOT NULL,
-  PRIMARY KEY (InspectionID),
-  FOREIGN KEY (LicenseID) REFERENCES Builder(LicenseID),
-  FOREIGN KEY (EmployeeID) REFERENCES Inspector(EmployeeID),
-  FOREIGN KEY (Address) REFERENCES Building(Address)
-);
-
-CREATE TABLE InspectionData
-(
-  Score INT NOT NULL,
-  Details VARCHAR(100) NOT NULL,
-  InspectionResults INT,
-  InspectionID INT NOT NULL,
-  PRIMARY KEY (InspectionID),
-  FOREIGN KEY (InspectionID) REFERENCES Inspection(InspectionID)
-);
-
-CREATE TABLE Builds
-(
-  BuilderID INT NOT NULL,
-  LicenseID INT NOT NULL,
-  PRIMARY KEY (BuilderID, LicenseID),
-  FOREIGN KEY (BuilderID) REFERENCES Building(BuilderID),
-  FOREIGN KEY (LicenseID) REFERENCES Builder(LicenseID)
-);
-
-CREATE TABLE Contain
-(
-  InspectionID INT NOT NULL,
-  BuilderID INT NOT NULL,
-  PRIMARY KEY (InspectionID, BuilderID),
-  FOREIGN KEY (InspectionID) REFERENCES Inspection(InspectionID),
-  FOREIGN KEY (BuilderID) REFERENCES Building(BuilderID)
-);
-
-alter table Builder add foreign key (InspectionOrderID) references Inspection(InspectionID);
-alter table Building add foreign key (BuilderID) references Builder(BuilderID);
-
-
-
-</string>
 			<key>table</key>
-			<string>Building</string>
+			<string>Inspection</string>
 			<key>view</key>
 			<string>SP_VIEW_CUSTOMQUERY</string>
 			<key>windowVerticalDividerPosition</key>
-			<real>214</real>
+			<real>158.5</real>
 		</dict>
 	</dict>
 	<key>encrypted</key>

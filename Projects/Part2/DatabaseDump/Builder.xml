@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!--
+-
+- Sequel Ace XML dump
+- Version 20016
+-
+- https://sequel-ace.com/
+- https://github.com/Sequel-Ace/Sequel-Ace
+-
+- Host: localhost (MySQL 8.0.27)
+- Database: CS7330_Project
+- Generation Time Time: 2021-12-02 18:36:02 +0000
+-
+-->
+
+<mysqldump xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<database name="CS7330_Project">
+
+	<table_structure name="Builder">
+		<field field="LicenseID" type="{length = 3, bytes = 0x696e74}" null="NO" key="{length = 3, bytes = 0x505249}" default="<null>" extra="" />
+		<field field="Name" type="{length = 12, bytes = 0x766172636861722831303029}" null="NO" key="{length = 0, bytes = 0x}" default="<null>" extra="" />
+		<field field="Address" type="{length = 12, bytes = 0x766172636861722832303029}" null="NO" key="{length = 0, bytes = 0x}" default="<null>" extra="" />
+		<field field="InspectionOrderID" type="{length = 3, bytes = 0x696e74}" null="YES" key="{length = 3, bytes = 0x4d554c}" default="<null>" extra="" />
+
+		<options name="Builder" engine="InnoDB" version="10" row_format="{length = 7, bytes = 0x44796e616d6963}" rows="5" avg_row_length="3276" data_length="16384" max_data_length="0" index_length="16384" data_free="0" create_time="2021-11-30 23:27:32" update_time="<null>" collation="utf8mb4_0900_ai_ci" create_options="" comment="" />
+	</table_structure>
+
+	<table_data name="Builder">
+
+	<row>
+		<field name="LicenseID">12321</field>
+		<field name="Name">Builder-5</field>
+		<field name="Address">12321 Builder Circle, Dallas TX</field>
+		<field name="InspectionOrderID" xsi:nil="true" />
+	</row>
+
+	<row>
+		<field name="LicenseID">12345</field>
+		<field name="Name">Builder-1</field>
+		<field name="Address">12345 Builder Circle, Dallas TX</field>
+		<field name="InspectionOrderID" xsi:nil="true" />
+	</row>
+
+	<row>
+		<field name="LicenseID">23456</field>
+		<field name="Name">Builder-2</field>
+		<field name="Address">23456 Builder Circle, Dallas TX</field>
+		<field name="InspectionOrderID" xsi:nil="true" />
+	</row>
+
+	<row>
+		<field name="LicenseID">34567</field>
+		<field name="Name">Builder-3</field>
+		<field name="Address">34567 Builder Circle, Dallas TX</field>
+		<field name="InspectionOrderID" xsi:nil="true" />
+	</row>
+
+	<row>
+		<field name="LicenseID">45678</field>
+		<field name="Name">Builder-4</field>
+		<field name="Address">45678 Builder Circle, Dallas TX</field>
+		<field name="InspectionOrderID" xsi:nil="true" />
+	</row>
+
+	</table_data>
+
+</database>
+</mysqldump>

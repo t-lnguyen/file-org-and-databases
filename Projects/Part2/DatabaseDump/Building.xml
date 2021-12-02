@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!--
+-
+- Sequel Ace XML dump
+- Version 20016
+-
+- https://sequel-ace.com/
+- https://github.com/Sequel-Ace/Sequel-Ace
+-
+- Host: localhost (MySQL 8.0.27)
+- Database: CS7330_Project
+- Generation Time Time: 2021-12-02 18:36:02 +0000
+-
+-->
+
+<mysqldump xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<database name="CS7330_Project">
+
+	<table_structure name="Building">
+		<field field="BuilderID" type="{length = 3, bytes = 0x696e74}" null="NO" key="{length = 3, bytes = 0x4d554c}" default="<null>" extra="" />
+		<field field="Address" type="{length = 12, bytes = 0x766172636861722832303029}" null="NO" key="{length = 3, bytes = 0x505249}" default="<null>" extra="" />
+		<field field="Type" type="{length = 12, bytes = 0x766172636861722831303029}" null="NO" key="{length = 0, bytes = 0x}" default="<null>" extra="" />
+		<field field="Size" type="{length = 3, bytes = 0x696e74}" null="YES" key="{length = 0, bytes = 0x}" default="<null>" extra="" />
+		<field field="DateFirstActivity" type="{length = 4, bytes = 0x64617465}" null="YES" key="{length = 0, bytes = 0x}" default="<null>" extra="" />
+		<field field="InspectionRecordID" type="{length = 3, bytes = 0x696e74}" null="YES" key="{length = 3, bytes = 0x4d554c}" default="<null>" extra="" />
+
+		<options name="Building" engine="InnoDB" version="10" row_format="{length = 7, bytes = 0x44796e616d6963}" rows="19" avg_row_length="862" data_length="16384" max_data_length="0" index_length="32768" data_free="0" create_time="2021-12-01 14:48:01" update_time="2021-12-02 11:49:08" collation="utf8mb4_0900_ai_ci" create_options="" comment="" />
+	</table_structure>
+
+	<table_data name="Building">
+
+	<row>
+		<field name="BuilderID">23456</field>
+		<field name="Address">100 Industrial Ave., Fort Worth, TX</field>
+		<field name="Type">commerical</field>
+		<field name="Size">100000</field>
+		<field name="DateFirstActivity">2005-06-01</field>
+		<field name="InspectionRecordID" xsi:nil="true" />
+	</row>
+
+	<row>
+		<field name="BuilderID">12345</field>
+		<field name="Address">100 Main St., Dallas, TX</field>
+		<field name="Type">commerical</field>
+		<field name="Size">250000</field>
+		<field name="DateFirstActivity">1999-12-31</field>
+		<field name="InspectionRecordID" xsi:nil="true" />
+	</row>
+
+	<row>
+		<field name="BuilderID">45678</field>
+		<field name="Address">100 Winding Wood, Carrollton, TX</field>
+		<field name="Type">residential</field>
+		<field name="Size">2500</field>
+		<field name="DateFirstActivity" xsi:nil="true" />
+		<field name="InspectionRecordID" xsi:nil="true" />
+	</row>
+
+	<row>
+		<field name="BuilderID">23456</field>
+		<field name="Address">101 Industrial Ave., Fort Worth, TX</field>
+		<field name="Type">commerical</field>
+		<field name="Size">80000</field>
+		<field name="DateFirstActivity">2005-06-01</field>
+		<field name="InspectionRecordID" xsi:nil="true" />
+	</row>
+
+	<row>
+		<field name="BuilderID">23456</field>
+		<field name="Address">102 Industrial Ave., Fort Worth, TX</field>
+		<field name="Type">commerical</field>
+		<field name="Size">75000</field>
+		<field name="DateFirstActivity">2005-06-01</field>
+		<field name="InspectionRecordID" xsi:nil="true" />
+	</row>
+
+	<row>
+		<field name="BuilderID">45678</field>
+		<field name="Address">102 Winding Wood, Carrollton, TX</field>
+		<field name="Type">residential</field>
+		<field name="Size">2800</field>
+		<field name="DateFirstActivity" xsi:nil="true" />
+		<field name="InspectionRecordID" xsi:nil="true" />
+	</row>
+
+	<row>
+		<field name="BuilderID">23456</field>
+		<field name="Address">103 Industrial Ave., Fort Worth, TX</field>
+		<field name="Type">commerical</field>
+		<field name="Size">50000</field>
+		<field name="DateFirstActivity">2005-06-01</field>
+		<field name="InspectionRecordID" xsi:nil="true" />
+	</row>
+
+	<row>
+		<field name="BuilderID">23456</field>
+		<field name="Address">104 Industrial Ave., Fort Worth, TX</field>
+		<field name="Type">commerical</field>
+		<field name="Size">80000</field>
+		<field name="DateFirstActivity">2005-06-01</field>
+		<field name="InspectionRecordID" xsi:nil="true" />
+	</row>
+
+	<row>
+		<field name="BuilderID">23456</field>
+		<field name="Address">105 Industrial Ave., Fort Worth, TX</field>
+		<field name="Type">commerical</field>
+		<field name="Size">90000</field>
+		<field name="DateFirstActivity">2005-06-01</field>
+		<field name="InspectionRecordID" xsi:nil="true" />
+	</row>
+
+	<row>
+		<field name="BuilderID">34567</field>
+		<field name="Address">1420 Main St., Lewisville TX</field>
+		<field name="Type">residential</field>
+		<field name="Size">1600</field>
+		<field name="DateFirstActivity" xsi:nil="true" />
+		<field name="InspectionRecordID" xsi:nil="true" />
+	</row>
+
+	<row>
+		<field name="BuilderID">12321</field>
+		<field name="Address">210 Cherry Bark Lane, Plano, TX</field>
+		<field name="Type">residential</field>
+		<field name="Size">3200</field>
+		<field name="DateFirstActivity">2016-10-01</field>
+		<field name="InspectionRecordID" xsi:nil="true" />
+	</row>
+
+	<row>
+		<field name="BuilderID">12321</field>
+		<field name="Address">212 Cherry Bark Lane, Plano, TX</field>
+		<field name="Type">residential</field>
+		<field name="Size" xsi:nil="true" />
+		<field name="DateFirstActivity" xsi:nil="true" />
+		<field name="InspectionRecordID" xsi:nil="true" />
+	</row>
+
+	<row>
+		<field name="BuilderID">12321</field>
+		<field name="Address">214 Cherry Bark Lane, Plano, TX</field>
+		<field name="Type">residential</field>
+		<field name="Size" xsi:nil="true" />
+		<field name="DateFirstActivity" xsi:nil="true" />
+		<field name="InspectionRecordID" xsi:nil="true" />
+	</row>
+
+	<row>
+		<field name="BuilderID">12321</field>
+		<field name="Address">216 Cherry Bark Lane, Plano, TX</field>
+		<field name="Type">residential</field>
+		<field name="Size" xsi:nil="true" />
+		<field name="DateFirstActivity" xsi:nil="true" />
+		<field name="InspectionRecordID" xsi:nil="true" />
+	</row>
+
+	<row>
+		<field name="BuilderID">12345</field>
+		<field name="Address">300 Oak St., Dallas, TX</field>
+		<field name="Type">residential</field>
+		<field name="Size">3000</field>
+		<field name="DateFirstActivity">2000-01-01</field>
+		<field name="InspectionRecordID" xsi:nil="true" />
+	</row>
+
+	<row>
+		<field name="BuilderID">12345</field>
+		<field name="Address">302 Oak St., Dallas, TX</field>
+		<field name="Type">residential</field>
+		<field name="Size">4000</field>
+		<field name="DateFirstActivity">2001-02-01</field>
+		<field name="InspectionRecordID" xsi:nil="true" />
+	</row>
+
+	<row>
+		<field name="BuilderID">12345</field>
+		<field name="Address">304 Oak St., Dallas, TX</field>
+		<field name="Type">residential</field>
+		<field name="Size">1500</field>
+		<field name="DateFirstActivity">2002-03-01</field>
+		<field name="InspectionRecordID" xsi:nil="true" />
+	</row>
+
+	<row>
+		<field name="BuilderID">12345</field>
+		<field name="Address">306 Oak St., Dallas, TX</field>
+		<field name="Type">residential</field>
+		<field name="Size">1500</field>
+		<field name="DateFirstActivity">2003-04-01</field>
+		<field name="InspectionRecordID" xsi:nil="true" />
+	</row>
+
+	<row>
+		<field name="BuilderID">12345</field>
+		<field name="Address">308 Oak St., Dallas, TX</field>
+		<field name="Type">residential</field>
+		<field name="Size">2000</field>
+		<field name="DateFirstActivity">2003-04-01</field>
+		<field name="InspectionRecordID" xsi:nil="true" />
+	</row>
+
+	</table_data>
+
+</database>
+</mysqldump>

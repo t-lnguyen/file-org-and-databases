@@ -111,46 +111,41 @@ CREATE TRIGGER enforce_Inspection_Type_sequence_and_pass_status
 BEFORE INSERT ON Inspection
 FOR EACH ROW
 BEGIN
-	-- If Inspection.Type is PLU OR ELE AND the assigned Inspector.EmployeeID does not have a Inspection.Type = FRM and Inspection.InspectionResult = Pass,
+	-- If Inspection.Type is PLU OR ELE AND the assigned Inspector.Address does not have a Inspection.Type = FRM and of this, a passing Inspection Inspection.InspectionResult = 1,
     -- then it cannot be inserted
-    IF(NEW.Type = 'PLU' OR NEW.Type = 'ELE' AND 
-		EXISTS(select i.InspectionDate from Inspection i where month(i.InspectionDate) = month(NEW.InspectionDate)) AND
-		NOT EXISTS(select i.Type from Inspection i join InspectionData id on i.InspectionID = id.InspectionID where i.EmployeeID = NEW.EmployeeID AND 
-			i.Type = 'FRM' AND id.InspectionResults = 1)) THEN
-		signal sqlstate '45010' set message_text = 'Inspection Type PLU does not have passing FRM!';	
+    IF((NEW.Type = 'PLU' OR NEW.Type = 'ELE') AND 
+		NOT EXISTS(select i.InspectionDate from Inspection i where i.Address = NEW.Address AND i.Type = 'FRM' AND i.InspectionResults = 1))
+		THEN
+		signal sqlstate '45010' set message_text = 'Inspection Type PLU or ELE does not have passing FRM!';	
     END IF;
     
-      -- If Inspection.Type is FN3 OR POL AND the assigned Inspector.EmployeeID does not have a Inspection.Type = PLU and Inspection.InspectionResult = Pass,
+    -- If Inspection.Type is FN3 OR POL AND the assigned Inspector.EmployeeID does not have a Inspection.Type = PLU and Inspection.InspectionResult = Pass,
     -- then it cannot be inserted
-      IF(NEW.Type = 'FN3' OR NEW.Type = 'POL' AND 
-		EXISTS(select i.InspectionDate from Inspection i where month(i.InspectionDate) = month(NEW.InspectionDate)) AND
-		NOT EXISTS(select i.Type from Inspection i join InspectionData id on i.InspectionID = id.InspectionID where i.EmployeeID = NEW.EmployeeID AND 
-			i.Type = 'PLU' AND id.InspectionResults = 1)) THEN
+      IF((NEW.Type = 'FN3' OR NEW.Type = 'POL') AND 
+		NOT EXISTS(select i.InspectionDate from Inspection i where i.Address = NEW.Address AND i.Type = 'PLU' AND i.InspectionResults = 1)) 
+		THEN
 		signal sqlstate '45011' set message_text = 'Inspection Type FN3 or POL does not have passing PLU!';	
     END IF;
     
     -- If Inspection.Type is HAC AND the assigned Inspector.EmployeeID does not have a Inspection.Type = ELE and Inspection.InspectionResult = Pass,
     -- then it cannot be inserted
-    IF(NEW.Type = 'HAC' AND 
-		EXISTS(select i.InspectionDate from Inspection i where month(i.InspectionDate) = month(NEW.InspectionDate)) AND
-		NOT EXISTS(select i.Type from Inspection i join InspectionData id on i.InspectionID = id.InspectionID where i.EmployeeID = NEW.EmployeeID AND 
-			i.Type = 'ELE' AND id.InspectionResults = 1)) THEN
+    IF((NEW.Type = 'HAC') AND 
+		NOT EXISTS(select i.InspectionDate from Inspection i where i.Address = NEW.Address AND i.Type = 'ELE' AND i.InspectionResults = 1)) 
+		THEN
 		signal sqlstate '45012' set message_text = 'Inspection Type HAC does not have passing ELE!';	
     END IF;   
       -- If Inspection.Type is FNL AND the assigned Inspector.EmployeeID does not have a Inspection.Type = HAC AND Inspection.Type = PLU AND Inspection.InspectionResult = Pass for both,
     -- then it cannot be inserted
-    IF(NEW.Type = 'FNL' AND 
-		EXISTS(select i.InspectionDate from Inspection i where month(i.InspectionDate) = month(NEW.InspectionDate)) AND
-		NOT EXISTS(select i.Type from Inspection i join InspectionData id on i.InspectionID = id.InspectionID where i.EmployeeID = NEW.EmployeeID AND i.Type = 'HAC' AND id.InspectionResults = 1) AND 
-		NOT EXISTS(select i.Type from Inspection i join InspectionData id on i.InspectionID = id.InspectionID where i.EmployeeID = NEW.EmployeeID AND i.Type = 'PLU' AND id.InspectionResults = 1)) THEN
+    IF((NEW.Type = 'FNL') AND 
+		NOT EXISTS(select i.InspectionDate from Inspection i where i.Address = NEW.Address AND i.Type = 'HAC' AND i.InspectionResults = 1) AND 
+		NOT EXISTS(select i.InspectionDate from Inspection i where i.Address = NEW.Address AND i.Type = 'PLU' AND i.InspectionResults = 1)) THEN
 			signal sqlstate '45013' set message_text = 'Inspection Type FNL does not have passing HAC AND PLU!';	
     END IF;
 	-- If Inspection.Type is FN2 AND the assigned Inspector.EmployeeID does not have a Inspection.Type = ELE AND Inspection.Type = PLU AND Inspection.InspectionResult = Pass for both,
     -- then it cannot be inserted
-    IF(NEW.Type = 'FN2' AND 
-		EXISTS(select i.InspectionDate from Inspection i where month(i.InspectionDate) = month(NEW.InspectionDate)) AND
-		NOT EXISTS(select i.Type from Inspection i join InspectionData id on i.InspectionID = id.InspectionID where i.EmployeeID = NEW.EmployeeID AND i.Type = 'ELE' AND id.InspectionResults = 1) AND 
-		NOT EXISTS(select i.Type from Inspection i join InspectionData id on i.InspectionID = id.InspectionID where i.EmployeeID = NEW.EmployeeID AND i.Type = 'PLU' AND id.InspectionResults = 1)) THEN
+    IF((NEW.Type = 'FN2')AND 
+		NOT EXISTS(select i.InspectionDate from Inspection i where i.Address = NEW.Address AND i.Type = 'ELE' AND i.InspectionResults = 1) AND 
+		NOT EXISTS(select i.InspectionDate from Inspection i where i.Address = NEW.Address AND i.Type = 'PLU' AND i.InspectionResults = 1)) THEN
 			signal sqlstate '45014' set message_text = 'Inspection Type FN2 does not have passing ELE AND PLU!';	
     END IF;
  
@@ -158,35 +153,6 @@ END
 |
 delimiter ;
 
--- If InspectionData.Score &gt; 75, then InspectionData.InspectionResults is 1 for pass; if InspectionData.Score &lt; 75, then InspectionData.InspectionResults is 0 for fail
-delimiter |
-CREATE TRIGGER enforce_pass_fail_InspectionData_result
-BEFORE INSERT ON InspectionData
-FOR EACH ROW
-BEGIN
-    IF(NEW.Score &gt; 75) THEN
-			SET NEW.InspectionResults = 1;		
-        END IF;
-        IF(NEW.Score &lt; 75) THEN
-			SET NEW.InspectionResults = 0;		
-        END IF;
-END
-|
-delimiter ;
-
--- Once inserted, InspectionData.InspectionResults can never be change
--- -- if we have a record that matches the proposed insert values via InspectionID AND the proposed Score is not null AND the matching record has a Score
-delimiter |
-CREATE TRIGGER enforce__InspectionData_Score_cannot_change
-BEFORE INSERT ON InspectionData
-FOR EACH ROW
-BEGIN
-    IF(EXISTS(select i.Score from InspectionData i where i.InspectionID = NEW.InspectionID AND NEW.Score IS NOT NULL AND i.Score IS NOT NULL)) THEN
-			signal sqlstate '45003' set message_text = 'Inspection Data Score cannot be changed!';		
-        END IF;
-END
-|
-delimiter ;
 
 -- A Builder and Building.Location must exist before requesting an inspection
 -- -- Check BuilderID on Builder and Building AND see if the Address is NOT NULL
@@ -204,7 +170,7 @@ delimiter ;
 
 -- -- -- -- -- TESTING TRIGGER -- -- -- -- 
 
-
+select i.InspectionDate from Inspection i where month(i.InspectionDate) = 10 AND i.EmployeeID = 101 AND i.Type = 'FRM' AND i.InspectionResults = 1;
 
 
 </string>

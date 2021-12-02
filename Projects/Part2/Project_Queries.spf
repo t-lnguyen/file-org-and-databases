@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>ContentFilters</key>
+	<dict/>
+	<key>auto_connect</key>
+	<true/>
+	<key>data</key>
+	<dict>
+		<key>connection</key>
+		<dict>
+			<key>allowDataLocalInfile</key>
+			<integer>0</integer>
+			<key>database</key>
+			<string>CS7330_Project</string>
+			<key>enableClearTextPlugin</key>
+			<integer>0</integer>
+			<key>host</key>
+			<string>localhost</string>
+			<key>kcid</key>
+			<string>-257101206588769657</string>
+			<key>name</key>
+			<string>MySql_Testing</string>
+			<key>port</key>
+			<integer>3306</integer>
+			<key>rdbms_type</key>
+			<string>mysql</string>
+			<key>sslCACertFileLocation</key>
+			<string></string>
+			<key>sslCACertFileLocationEnabled</key>
+			<integer>0</integer>
+			<key>sslCertificateFileLocation</key>
+			<string></string>
+			<key>sslCertificateFileLocationEnabled</key>
+			<integer>0</integer>
+			<key>sslKeyFileLocation</key>
+			<string></string>
+			<key>sslKeyFileLocationEnabled</key>
+			<integer>0</integer>
+			<key>type</key>
+			<string>SPTCPIPConnection</string>
+			<key>useSSL</key>
+			<integer>0</integer>
+			<key>user</key>
+			<string>root</string>
+		</dict>
+		<key>session</key>
+		<dict>
+			<key>connectionEncoding</key>
+			<string>utf8mb4</string>
+			<key>contentFilterV2</key>
+			<dict>
+				<key>column</key>
+				<string>InspectionID</string>
+				<key>enabled</key>
+				<false/>
+				<key>filterClass</key>
+				<string>expressionNode</string>
+				<key>filterComparison</key>
+				<string>=</string>
+				<key>filterType</key>
+				<string>number</string>
+				<key>filterValues</key>
+				<array>
+					<string></string>
+				</array>
+			</dict>
+			<key>contentPageNumber</key>
+			<integer>1</integer>
+			<key>contentSelection</key>
+			<data>
+			YnBsaXN0MDDUAQIDBAUGBwpYJHZlcnNpb25ZJGFyY2hpdmVyVCR0
+			b3BYJG9iamVjdHMSAAGGoF8QD05TS2V5ZWRBcmNoaXZlctEICVRk
+			YXRhgAGvECQLDBkaGxwdTU5PUFFSU1RVVldYWVpbXF1eX2BhYmNk
+			a29zd3tVJG51bGzTDQ4PEBQYV05TLmtleXNaTlMub2JqZWN0c1Yk
+			Y2xhc3OjERITgAKAA4AEoxUWF4AFgAaAH4AjVHR5cGVUcm93c1Rr
+			ZXlzXxAmU2VsZWN0aW9uRGV0YWlsVHlwZVByaW1hcnlLZXllZERl
+			dGFpbHPTDQ4PHjVMrxAWHyAhIiMkJSYnKCkqKywtLi8wMTIzNIAH
+			gAiACYAKgAuADIANgA6AD4AQgBGAEoATgBSAFYAWgBeAGIAZgBqA
+			G4AcrxAWNjY2NjY2NjY2NjY2NjY2NjY2NjY2NoAdgB2AHYAdgB2A
+			HYAdgB2AHYAdgB2AHYAdgB2AHYAdgB2AHYAdgB2AHYAdgB5SMTBS
+			MTlSMTFSMTJRMVIyMFIxM1EyUTNSMjFSMTRRNFIyMlIxNVE1UTZS
+			MjNSMTZRN1E4UjE3UTkJ0mVmZ2haJGNsYXNzbmFtZVgkY2xhc3Nl
+			c18QE05TTXV0YWJsZURpY3Rpb25hcnmjZ2lqXE5TRGljdGlvbmFy
+			eVhOU09iamVjdNIOD2xuoW2AIIAi0g9wcXJZTlMuc3RyaW5ngCFc
+			SW5zcGVjdGlvbklE0mVmdHVfEA9OU011dGFibGVTdHJpbmejdHZq
+			WE5TU3RyaW5n0mVmeHleTlNNdXRhYmxlQXJyYXmjeHpqV05TQXJy
+			YXnSZWZpfKJpagAIABEAGgAkACkAMgA3AEkATABRAFMAegCAAIcA
+			jwCaAKEApQCnAKkAqwCvALEAswC1ALcAvADBAMYA7wD2AQ8BEQET
+			ARUBFwEZARsBHQEfASEBIwElAScBKQErAS0BLwExATMBNQE3ATkB
+			OwFUAVYBWAFaAVwBXgFgAWIBZAFmAWgBagFsAW4BcAFyAXQBdgF4
+			AXoBfAF+AYABggGFAYgBiwGOAZABkwGWAZgBmgGdAaABogGlAagB
+			qgGsAa8BsgG0AbYBuQG7AbwBwQHMAdUB6wHvAfwCBQIKAgwCDgIQ
+			AhUCHwIhAi4CMwJFAkkCUgJXAmYCagJyAncAAAAAAAACAQAAAAAA
+			AAB9AAAAAAAAAAAAAAAAAAACeg==
+			</data>
+			<key>contentSortCol</key>
+			<string>EmployeeID</string>
+			<key>contentSortColIsAsc</key>
+			<false/>
+			<key>contentViewport</key>
+			<string>{{0, 0}, {1280.5, 733}}</string>
+			<key>isToolbarVisible</key>
+			<true/>
+			<key>queries</key>
+			<string>
+-- -- -- Project Queries -- -- -- 
+-- List all buildings (building#, address, type) that have not passed a final (FNL, FN2, FN3) inspection.
+select b.Address from Building b 
+join Inspection i on i.Address = b.Address 
+where i.Type in ('FNL', 'FN2', 'FN3') AND i.InspectionResults = 1;
+
+-- List the id and name of inspectors
+select i.EmployeeID, i.Name from Inspector i 
+-- who have given 'at least one failing score'
+where EXISTS
+(
+	select NULL from Inspection ip 
+	where i.EmployeeID = ip.EmployeeID AND ip.Score &lt; 75
+);
+
+-- What inspection type(s) have never been failed?
+select DISTINCT i.Type from Inspection i 
+where i.Type NOT IN 
+-- records that are failed
+(
+	select ip.Type from Inspection ip
+	where ip.InspectionResults = 0
+);
+
+-- What is the total cost of all inspections for builder 12345?
+select b.LicenseID, b.Name, SUM(i.Cost) TotalCost from Builder b 
+join Inspection i on i.LicenseID = b.LicenseID
+where b.LicenseID = 12345;
+
+-- What is the average score for all inspections performed by Inspector 102?
+select ip.EmployeeID, ip.Name, AVG(i.Score) AverageScore from Inspector ip 
+join Inspection i on i.EmployeeID = ip.EmployeeID
+where ip.EmployeeID = 102;
+
+-- How much revenue did FODB receive for inspections during October?
+select SUM(i.Cost) Revenue from Inspection i
+where month(i.InspectionDate) = 10;
+
+-- How much revenue was generated this year by inspectors with more than 15 years seniority?
+-- -- Assuming 'this year' is 2021
+select SUM(i.Cost) Revenue from Inspection i
+where i.EmployeeID in 
+-- Get inspectors whose HireDate is at least 15 years from this year, 2021
+(
+	select ip.EmployeeID from Inspector ip
+	where timestampdiff(YEAR, ip.HireDate, curdate()) &gt;= 15
+);
+
+
+
+
+
+
+</string>
+			<key>table</key>
+			<string>Inspection</string>
+			<key>view</key>
+			<string>SP_VIEW_CUSTOMQUERY</string>
+			<key>windowVerticalDividerPosition</key>
+			<real>158.5</real>
+		</dict>
+	</dict>
+	<key>encrypted</key>
+	<false/>
+	<key>format</key>
+	<string>connection</string>
+	<key>queryFavorites</key>
+	<array/>
+	<key>rdbms_type</key>
+	<string>mysql</string>
+	<key>rdbms_version</key>
+	<string>8.0.27</string>
+	<key>version</key>
+	<integer>1</integer>
+</dict>
+</plist>

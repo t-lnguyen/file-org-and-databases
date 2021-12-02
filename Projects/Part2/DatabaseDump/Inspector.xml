@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!--
+-
+- Sequel Ace XML dump
+- Version 20016
+-
+- https://sequel-ace.com/
+- https://github.com/Sequel-Ace/Sequel-Ace
+-
+- Host: localhost (MySQL 8.0.27)
+- Database: CS7330_Project
+- Generation Time Time: 2021-12-02 18:36:02 +0000
+-
+-->
+
+<mysqldump xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<database name="CS7330_Project">
+
+	<table_structure name="Inspector">
+		<field field="EmployeeID" type="{length = 3, bytes = 0x696e74}" null="NO" key="{length = 3, bytes = 0x505249}" default="<null>" extra="" />
+		<field field="Name" type="{length = 11, bytes = 0x7661726368617228333029}" null="NO" key="{length = 0, bytes = 0x}" default="<null>" extra="" />
+		<field field="HireDate" type="{length = 4, bytes = 0x64617465}" null="NO" key="{length = 0, bytes = 0x}" default="<null>" extra="" />
+
+		<options name="Inspector" engine="InnoDB" version="10" row_format="{length = 7, bytes = 0x44796e616d6963}" rows="5" avg_row_length="3276" data_length="16384" max_data_length="0" index_length="0" data_free="0" create_time="2021-11-30 23:26:29" update_time="<null>" collation="utf8mb4_0900_ai_ci" create_options="" comment="" />
+	</table_structure>
+
+	<table_data name="Inspector">
+
+	<row>
+		<field name="EmployeeID">101</field>
+		<field name="Name">Inspector-1</field>
+		<field name="HireDate">1984-11-08</field>
+	</row>
+
+	<row>
+		<field name="EmployeeID">102</field>
+		<field name="Name">Inspector-2</field>
+		<field name="HireDate">1994-11-08</field>
+	</row>
+
+	<row>
+		<field name="EmployeeID">103</field>
+		<field name="Name">Inspector-3</field>
+		<field name="HireDate">2004-11-08</field>
+	</row>
+
+	<row>
+		<field name="EmployeeID">104</field>
+		<field name="Name">Inspector-4</field>
+		<field name="HireDate">2014-11-08</field>
+	</row>
+
+	<row>
+		<field name="EmployeeID">105</field>
+		<field name="Name">Inspector-5</field>
+		<field name="HireDate">2018-11-08</field>
+	</row>
+
+	</table_data>
+
+</database>
+</mysqldump>
